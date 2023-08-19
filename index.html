@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+    <title>Upwork</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css"
+      integrity="sha512-Z/def5z5u2aR89OuzYcxmDJ0Bnd5V1cKqBEbvLOiUNWdg9PQeXVvXLI90SE4QOHGlfLqUnDNVAYyZi8UwUTmWQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.min.js"
+      integrity="sha512-fHY2UiQlipUq0dEabSM4s+phmn+bcxSYzXP4vAXItBvBHU7zAM/mkhCZjtBEIJexhOMzZbgFlPLuErlJF2b+0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.bundle.min.js"
+      integrity="sha512-ToL6UYWePxjhDQKNioSi4AyJ5KkRxY+F1+Fi7Jgh0Hp5Kk2/s8FD7zusJDdonfe5B00Qw+B8taXxF6CFLnqNCw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"
+          ><img src="./assets/logo.svg" alt="" height="25px"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown links ms-3">
+              Find Work
+              <img src="./assets/dropdown.svg" alt="" height="10px" />
+              <ul class="dropdown-menu mt-1">
+                <li><a class="dropdown-item" href="#">Find Work</a></li>
+                <li><a class="dropdown-item" href="#">Saved Jops</a></li>
+                <li><a class="dropdown-item" href="#">Proposal</a></li>
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">My Status</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">My Project Dashboard</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown links ms-3">
+              My Jops
+              <img src="./assets/dropdown.svg" alt="" height="10px" />
+              <ul class="dropdown-menu mt-1">
+                <li><a class="dropdown-item" href="#">My Jops</a></li>
+                <li><a class="dropdown-item" href="#">All contract</a></li>
+                <li><a class="dropdown-item" href="#">Work Diary</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown links ms-3">
+              Reports
+              <img src="./assets/dropdown.svg" alt="" height="10px" />
+              <ul class="dropdown-menu mt-1">
+                <li><a class="dropdown-item" href="#">Overview</a></li>
+                <li><a class="dropdown-item" href="#">My reports</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Billing & Earnings</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Connects History</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Transaction History</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Certificate of Earnings</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown links ms-3">Message</li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2 rounded-pill"
+              data-bs-toggle="tooltip"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button
+              type="button"
+              class="btn btn-outline-secondary dropdown-toggle rounded-pill"
+              data-bs-toggle="dropdown"
+              id="dropdownMenuButton"
+            >
+              Jobs
+            </button>
+            <div
+              class="dropdown-menu"
+              aria-labelledby="dropdownMenuButton"
+              style="left: auto"
+            >
+              <a class="dropdown-item" href="#">Full-time</a>
+              <a class="dropdown-item" href="#">Part-time</a>
+              <a class="dropdown-item" href="#">Internship</a>
+            </div>
+          </form>
+          <div class="d-flex align-items-center text-center position-relative">
+            <span
+              class="p-2 d-flex align-items-center d-inline-block"
+              style="height: 40px; width: 40px"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                role="img"
+              >
+                <path
+                  fill="var(--icon-color, #001e00)"
+                  fill-rule="evenodd"
+                  d="M11.922 21c.545 0 1.013-.468 1.013-.935 0-.546-.468-.935-1.013-.935-.545 0-.935.467-.935.935-.078.467.39.935.935.935z"
+                  clip-rule="evenodd"
+                ></path>
+                <path
+                  vector-effect="non-scaling-stroke"
+                  stroke="var(--icon-color, #001e00)"
+                  stroke-linecap="round"
+                  stroke-miterlimit="10"
+                  stroke-width="1.5"
+                  d="M6 8.688C6 5.571 8.805 3 12.234 3c3.273 0 6.078 2.182 5.61 4.987-.312 2.104-3.195 3.35-4.52 4.987-1.168 1.48-1.168 2.65-1.324 3.662"
+                ></path>
+              </svg>
+            </span>
+            <span class="d-none d-sm-block d-md-block d-lg-none">Help</span>
+          </div>
+          <div class="d-flex align-items-center text-center position-relative">
+            <span
+              class="p-2 d-flex align-items-center d-inline-block"
+              style="height: 40px; width: 40px"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                role="img"
+              >
+                <path
+                  vector-effect="non-scaling-stroke"
+                  stroke="var(--icon-color, #001e00)"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="10"
+                  stroke-width="1.5"
+                  d="M15.34 15.999l4.26-2.364c.533-.272.533-1.181 0-1.454L3 3l2.13 17.271c.09.545.71.909 1.155.636l4.616-2.545"
+                ></path>
+                <path
+                  vector-effect="non-scaling-stroke"
+                  stroke="var(--icon-color, #001e00)"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="10"
+                  stroke-width="1.5"
+                  d="M10.9 18.362l2.753 2.09c.532.364 1.243.092 1.331-.636l.355-3.908L3 3l7.9 15.362z"
+                ></path>
+              </svg>
+            </span>
+            <span class="d-none d-sm-block d-md-block d-lg-none"
+              >Direct Message</span
+            >
+          </div>
+          <div class="d-flex align-items-center text-center position-relative">
+            <span
+              class="p-2 d-flex align-items-center d-inline-block"
+              style="height: 40px; width: 40px"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                role="img"
+              >
+                <path
+                  vector-effect="non-scaling-stroke"
+                  stroke="var(--icon-color, #001e00)"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="10"
+                  stroke-width="1.5"
+                  d="M19.273 17.564l-1.359-2.209c-.08-.082-.08-.245-.08-.327v-4.99c0-2.946-2.397-5.4-5.274-5.4h-.72c-2.877 0-5.274 2.372-5.274 5.4v5.072c0 .163 0 .245-.08.327l-1.359 2.045c-.32.41 0 1.064.56 1.064h13.027c.559.082.879-.491.559-.982z"
+                  clip-rule="evenodd"
+                ></path>
+                <path
+                  vector-effect="non-scaling-stroke"
+                  stroke="var(--icon-color, #001e00)"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="10"
+                  stroke-width="1.5"
+                  d="M12.16 4.636V3M9.842 18.628c0 1.308 1.04 2.372 2.318 2.372 1.279 0 2.318-1.064 2.318-2.372"
+                ></path>
+              </svg>
+            </span>
+            <span class="d-none d-sm-block d-md-block d-lg-none"
+              >Notfication</span
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-12 col-lg-9">
+            <div class="mb-30 d-none d-lg-block position-relative">
+              <div class="upcarousel position-relative d-flex">
+                <div class="announcement d-flex">
+                  <div class="illustration d-flex text-center">
+                    <div data-v-2ebd18ea="" class="up-illustration">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 145 130"
+                        aria-hidden="true"
+                        role="img"
+                      >
+                        <linearGradient
+                          id="jumpstarter-156-a-uid-34"
+                          gradientUnits="userSpaceOnUse"
+                          x1="38.557"
+                          y1="19.258"
+                          x2="131.082"
+                          y2="19.258"
+                          gradientTransform="matrix(1 0 0 -1 .006 129.994)"
+                        >
+                          <stop
+                            offset="0"
+                            stop-color="#c3d2c3"
+                            stop-opacity="0"
+                          ></stop>
+                          <stop
+                            offset=".01"
+                            stop-color="#c3d2c3"
+                            stop-opacity=".05"
+                          ></stop>
+                          <stop
+                            offset=".03"
+                            stop-color="#c3d2c3"
+                            stop-opacity=".3"
+                          ></stop>
+                          <stop
+                            offset=".06"
+                            stop-color="#c3d2c3"
+                            stop-opacity=".51"
+                          ></stop>
+                          <stop
+                            offset=".09"
+                            stop-color="#c3d2c3"
+                            stop-opacity=".69"
+                          ></stop>
+                          <stop
+                            offset=".12"
+                            stop-color="#c3d2c3"
+                            stop-opacity=".83"
+                          ></stop>
+                          <stop
+                            offset=".14"
+                            stop-color="#c3d2c3"
+                            stop-opacity=".92"
+                          ></stop>
+                          <stop
+                            offset=".17"
+                            stop-color="#c3d2c3"
+                            stop-opacity=".98"
+                          ></stop>
+                          <stop offset=".2" stop-color="#c3d2c3"></stop>
+                          <stop offset=".29" stop-color="#c3d2c3"></stop>
+                          <stop offset=".84" stop-color="#c3d2c3"></stop>
+                          <stop
+                            offset=".87"
+                            stop-color="#c3d2c3"
+                            stop-opacity=".78"
+                          ></stop>
+                          <stop
+                            offset=".96"
+                            stop-color="#c3d2c3"
+                            stop-opacity=".23"
+                          ></stop>
+                          <stop
+                            offset="1"
+                            stop-color="#c3d2c3"
+                            stop-opacity=".01"
+                          ></stop>
+                        </linearGradient>
+                        <path
+                          d="M130.1 111.8H39.6c-.6 0-1-.5-1-1 0-.6.5-1 1-1h90.5c.6 0 1 .5 1 1s-.5 1-1 1z"
+                          fill="url(#jumpstarter-156-a-uid-34)"
+                        ></path>
+                        <linearGradient
+                          id="jumpstarter-156-b-uid-34"
+                          gradientUnits="userSpaceOnUse"
+                          x1="7.26"
+                          y1="83.86"
+                          x2="52.248"
+                          y2="83.86"
+                          gradientTransform="matrix(1 0 0 -1 .006 129.994)"
+                        >
+                          <stop
+                            offset="0"
+                            stop-color="#c3d2c3"
+                            stop-opacity="0"
+                          ></stop>
+                          <stop
+                            offset=".01"
+                            stop-color="#c3d2c3"
+                            stop-opacity=".05"
+                          ></stop>
+                          <stop
+                            offset=".03"
+                            stop-color="#c3d2c3"
+                            stop-opacity=".3"
+                          ></stop>
+                          <stop
+                            offset=".06"
+                            stop-color="#c3d2c3"
+                            stop-opacity=".51"
+                          ></stop>
+                          <stop
+                            offset=".09"
+                            stop-color="#c3d2c3"
+                            stop-opacity=".69"
+                          ></stop>
+                          <stop
+                            offset=".12"
+                            stop-color="#c3d2c3"
+                            stop-opacity=".83"
+                          ></stop>
+                          <stop
+                            offset=".14"
+                            stop-color="#c3d2c3"
+                            stop-opacity=".92"
+                          ></stop>
+                          <stop
+                            offset=".17"
+                            stop-color="#c3d2c3"
+                            stop-opacity=".98"
+                          ></stop>
+                          <stop offset=".2" stop-color="#c3d2c3"></stop>
+                          <stop offset=".29" stop-color="#c3d2c3"></stop>
+                          <stop offset=".84" stop-color="#c3d2c3"></stop>
+                          <stop
+                            offset=".87"
+                            stop-color="#c3d2c3"
+                            stop-opacity=".78"
+                          ></stop>
+                          <stop
+                            offset=".96"
+                            stop-color="#c3d2c3"
+                            stop-opacity=".23"
+                          ></stop>
+                          <stop
+                            offset="1"
+                            stop-color="#c3d2c3"
+                            stop-opacity=".01"
+                          ></stop>
+                        </linearGradient>
+                        <path
+                          d="M51.4 47H8.1c-.5 0-.8-.4-.8-.8v-.1c.1-.4.4-.7.8-.7h43.3c.5 0 .8.4.8.8v.1c0 .4-.4.7-.8.7z"
+                          fill="url(#jumpstarter-156-b-uid-34)"
+                        ></path>
+                        <linearGradient
+                          id="jumpstarter-156-c-uid-34"
+                          gradientUnits="userSpaceOnUse"
+                          x1="-.006"
+                          y1="69.621"
+                          x2="50.493"
+                          y2="69.621"
+                          gradientTransform="matrix(1 0 0 -1 .006 129.994)"
+                        >
+                          <stop
+                            offset="0"
+                            stop-color="#c3d2c3"
+                            stop-opacity="0"
+                          ></stop>
+                          <stop
+                            offset=".01"
+                            stop-color="#c3d2c3"
+                            stop-opacity=".05"
+                          ></stop>
+                          <stop
+                            offset=".03"
+                            stop-color="#c3d2c3"
+                            stop-opacity=".3"
+                          ></stop>
+                          <stop
+                            offset=".06"
+                            stop-color="#c3d2c3"
+                            stop-opacity=".51"
+                          ></stop>
+                          <stop
+                            offset=".09"
+                            stop-color="#c3d2c3"
+                            stop-opacity=".69"
+                          ></stop>
+                          <stop
+                            offset=".12"
+                            stop-color="#c3d2c3"
+                            stop-opacity=".83"
+                          ></stop>
+                          <stop
+                            offset=".14"
+                            stop-color="#c3d2c3"
+                            stop-opacity=".92"
+                          ></stop>
+                          <stop
+                            offset=".17"
+                            stop-color="#c3d2c3"
+                            stop-opacity=".98"
+                          ></stop>
+                          <stop offset=".2" stop-color="#c3d2c3"></stop>
+                          <stop offset=".29" stop-color="#c3d2c3"></stop>
+                          <stop offset=".84" stop-color="#c3d2c3"></stop>
+                          <stop
+                            offset=".87"
+                            stop-color="#c3d2c3"
+                            stop-opacity=".78"
+                          ></stop>
+                          <stop
+                            offset=".96"
+                            stop-color="#c3d2c3"
+                            stop-opacity=".23"
+                          ></stop>
+                          <stop
+                            offset="1"
+                            stop-color="#c3d2c3"
+                            stop-opacity=".01"
+                          ></stop>
+                        </linearGradient>
+                        <path
+                          d="M49.7 61.2H.8c-.5 0-.8-.4-.8-.8v-.1c.1-.4.4-.7.8-.7h48.8c.5 0 .8.4.8.8v.1c0 .4-.3.7-.7.7z"
+                          fill="url(#jumpstarter-156-c-uid-34)"
+                        ></path>
+                        <linearGradient
+                          id="jumpstarter-156-d-uid-34"
+                          gradientUnits="userSpaceOnUse"
+                          x1="3.763"
+                          y1="55.382"
+                          x2="48.745"
+                          y2="55.382"
+                          gradientTransform="matrix(1 0 0 -1 .006 129.994)"
+                        >
+                          <stop
+                            offset="0"
+                            stop-color="#c3d2c3"
+                            stop-opacity="0"
+                          ></stop>
+                          <stop
+                            offset=".01"
+                            stop-color="#c3d2c3"
+                            stop-opacity=".05"
+                          ></stop>
+                          <stop
+                            offset=".03"
+                            stop-color="#c3d2c3"
+                            stop-opacity=".3"
+                          ></stop>
+                          <stop
+                            offset=".06"
+                            stop-color="#c3d2c3"
+                            stop-opacity=".51"
+                          ></stop>
+                          <stop
+                            offset=".09"
+                            stop-color="#c3d2c3"
+                            stop-opacity=".69"
+                          ></stop>
+                          <stop
+                            offset=".12"
+                            stop-color="#c3d2c3"
+                            stop-opacity=".83"
+                          ></stop>
+                          <stop
+                            offset=".14"
+                            stop-color="#c3d2c3"
+                            stop-opacity=".92"
+                          ></stop>
+                          <stop
+                            offset=".17"
+                            stop-color="#c3d2c3"
+                            stop-opacity=".98"
+                          ></stop>
+                          <stop offset=".2" stop-color="#c3d2c3"></stop>
+                          <stop offset=".29" stop-color="#c3d2c3"></stop>
+                          <stop offset=".84" stop-color="#c3d2c3"></stop>
+                          <stop
+                            offset=".87"
+                            stop-color="#c3d2c3"
+                            stop-opacity=".78"
+                          ></stop>
+                          <stop
+                            offset=".96"
+                            stop-color="#c3d2c3"
+                            stop-opacity=".23"
+                          ></stop>
+                          <stop
+                            offset="1"
+                            stop-color="#c3d2c3"
+                            stop-opacity=".01"
+                          ></stop>
+                        </linearGradient>
+                        <path
+                          d="M47.9 75.4H4.6c-.5 0-.8-.4-.8-.8v-.1c.1-.4.4-.7.8-.7h43.3c.5 0 .8.4.8.8v.1c0 .4-.4.7-.8.7z"
+                          fill="url(#jumpstarter-156-d-uid-34)"
+                        ></path>
+                        <path
+                          d="M129.2 18.2h-1.1c2.2 0 3.7 1.7 3.4 3.9L121 107.9c-.3 2.2-2.2 3.9-4.4 3.9h1.1c2.2 0 4.1-1.7 4.4-3.9l10.5-85.7c.3-2.2-1.3-4-3.4-4z"
+                          fill="#9aaa97"
+                        ></path>
+                        <linearGradient
+                          id="jumpstarter-156-e-uid-34"
+                          gradientUnits="userSpaceOnUse"
+                          x1="48.216"
+                          y1="22.282"
+                          x2="133.643"
+                          y2="107.707"
+                          gradientTransform="matrix(1 0 0 -1 .006 129.994)"
+                        >
+                          <stop offset=".31" stop-color="#e4ebe4"></stop>
+                          <stop offset=".57" stop-color="#e1e9e1"></stop>
+                          <stop offset=".74" stop-color="#d9e2d9"></stop>
+                          <stop offset=".89" stop-color="#cad7ca"></stop>
+                          <stop offset=".93" stop-color="#c3d2c3"></stop>
+                        </linearGradient>
+                        <path
+                          d="M116.6 111.8H53.8c-2.2 0-3.7-1.7-3.4-3.9l10.5-85.7c.3-2.2 2.2-3.9 4.4-3.9h62.9c2.2 0 3.7 1.7 3.4 3.9L121 107.9c-.3 2.1-2.2 3.9-4.4 3.9z"
+                          fill="url(#jumpstarter-156-e-uid-34)"
+                        ></path>
+                        <path
+                          d="M102.2 81.9H74.5c-.4 0-.7-.3-.7-.7v-.1c.1-.4.4-.8.9-.8h27.7c.4 0 .7.3.7.7v.1c-.1.5-.5.8-.9.8zm8.7 6H64.3c-.4 0-.7-.3-.7-.7v-.1c.1-.4.4-.8.9-.8h46.7c.4 0 .7.3.7.7v.1c-.2.5-.5.8-1 .8z"
+                          fill="#14a800"
+                        ></path>
+                        <polygon
+                          points="125.3,81.4 117.9,79.6 111.3,80.7 106.6,83.3 117.2,109.3 122.4,104.8"
+                          fill="#c3d2c3"
+                        ></polygon>
+                        <polygon
+                          points="122.4,104.8 125.3,81.4 124.3,81.2 121.3,105.8"
+                          fill="#65735b"
+                        ></polygon>
+                        <path
+                          d="M111.1 86.4h-3.2l.6 1.6h2.4c.4 0 .8-.3.9-.8.1-.4-.2-.7-.6-.8h-.1z"
+                          fill="#126b00"
+                        ></path>
+                        <ellipse
+                          transform="rotate(-43.501 92.727 50.334)"
+                          cx="92.7"
+                          cy="50.3"
+                          rx="18.3"
+                          ry="16.5"
+                          fill="#c3d2c3"
+                        ></ellipse>
+                        <linearGradient
+                          id="jumpstarter-156-f-uid-34"
+                          gradientUnits="userSpaceOnUse"
+                          x1="79.287"
+                          y1="79.056"
+                          x2="87.284"
+                          y2="79.056"
+                          gradientTransform="matrix(1 0 .11 -1 .286 129.994)"
+                        >
+                          <stop offset=".52" stop-color="#eb9546"></stop>
+                          <stop offset=".75" stop-color="#e08c42"></stop>
+                          <stop offset="1" stop-color="#ce7e3c"></stop>
+                        </linearGradient>
+                        <polygon
+                          points="96.4,53.5 96.2,48.4 89.7,48.4 88.4,53.5"
+                          fill="url(#jumpstarter-156-f-uid-34)"
+                        ></polygon>
+                        <path
+                          d="M92.6 51.5c2 0 3.8 1 3.8 1l-.1-2h-4.1l.4 1z"
+                          fill="#ce7e3c"
+                        ></path>
+                        <radialGradient
+                          id="jumpstarter-156-g-uid-34"
+                          cx="-1647.163"
+                          cy="866.166"
+                          r="8.405"
+                          gradientTransform="matrix(.99 0 .1 -.99 1635.581 899.7)"
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop offset=".68" stop-color="#eb9546"></stop>
+                          <stop offset=".92" stop-color="#d6853f"></stop>
+                          <stop offset="1" stop-color="#ce7e3c"></stop>
+                        </radialGradient>
+                        <path
+                          d="M88.7 50.2l.1.1c1.1.8 2.4 1.2 3.8 1.2 1.5 0 3-.5 4.2-1.3 1.9-1.3 3.3-3.3 3.5-5.7.4-3.8-2.4-6.9-6.2-7s-7.3 3-7.8 6.9c-.2 2.4.7 4.6 2.4 5.8z"
+                          fill="url(#jumpstarter-156-g-uid-34)"
+                        ></path>
+                        <radialGradient
+                          id="jumpstarter-156-h-uid-34"
+                          cx="-1646.517"
+                          cy="856.255"
+                          r="21.301"
+                          gradientTransform="matrix(.99 0 .1 -.99 1635.581 899.7)"
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop offset=".68" stop-color="#bda1e7"></stop>
+                          <stop offset=".77" stop-color="#ab92d2"></stop>
+                          <stop offset=".97" stop-color="#7d6b9d"></stop>
+                          <stop offset="1" stop-color="#746493"></stop>
+                        </radialGradient>
+                        <path
+                          d="M107.1 55.5c-1.2-2.2-3.5-3.5-6.1-3.5-.7 0-1.4.1-2.1.3l-1.9.5c-3 .8-6.2.8-9 0l-1.8-.5c-.7-.2-1.4-.3-2-.3-2.6 0-5.2 1.3-6.8 3.5-.4.6-.8 1.2-1.1 1.9 2.1 6.1 7.7 10.3 14.8 10.3s13.6-4.2 17-10.3c-.4-.7-.7-1.3-1-1.9z"
+                          fill="url(#jumpstarter-156-h-uid-34)"
+                        ></path>
+                        <linearGradient
+                          id="jumpstarter-156-i-uid-34"
+                          gradientUnits="userSpaceOnUse"
+                          x1="-51.918"
+                          y1="58.679"
+                          x2="-34.037"
+                          y2="64.187"
+                          gradientTransform="scale(1 -1) rotate(-20.138 -387.937 -441.327)"
+                        >
+                          <stop offset="0" stop-color="#01cdbe"></stop>
+                          <stop offset=".24" stop-color="#22d3bb"></stop>
+                          <stop offset=".77" stop-color="#76e1b4"></stop>
+                          <stop offset=".93" stop-color="#91e6b2"></stop>
+                        </linearGradient>
+                        <polygon
+                          points="109.9,72.9 118.4,103.8 121.2,75.7"
+                          fill="url(#jumpstarter-156-i-uid-34)"
+                        ></polygon>
+                        <linearGradient
+                          id="jumpstarter-156-j-uid-34"
+                          gradientUnits="userSpaceOnUse"
+                          x1="-25.913"
+                          y1="65.988"
+                          x2="-8.95"
+                          y2="58.093"
+                          gradientTransform="scale(1 -1) rotate(-20.138 -387.937 -441.327)"
+                        >
+                          <stop offset="0" stop-color="#01cdbe"></stop>
+                          <stop offset=".24" stop-color="#22d3bb"></stop>
+                          <stop offset=".77" stop-color="#76e1b4"></stop>
+                          <stop offset=".93" stop-color="#91e6b2"></stop>
+                        </linearGradient>
+                        <polygon
+                          points="134.5,80.6 118.4,103.8 145,85.7"
+                          fill="url(#jumpstarter-156-j-uid-34)"
+                        ></polygon>
+                        <linearGradient
+                          id="jumpstarter-156-k-uid-34"
+                          gradientUnits="userSpaceOnUse"
+                          x1="-42.001"
+                          y1="57.518"
+                          x2="-24.669"
+                          y2="64.565"
+                          gradientTransform="scale(1 -1) rotate(-20.138 -387.937 -441.327)"
+                        >
+                          <stop offset="0" stop-color="#01cdbe"></stop>
+                          <stop offset=".24" stop-color="#22d3bb"></stop>
+                          <stop offset=".77" stop-color="#76e1b4"></stop>
+                          <stop offset=".93" stop-color="#91e6b2"></stop>
+                        </linearGradient>
+                        <polyline
+                          points="117.3,79.7 118.4,103.8 134.9,86.1"
+                          fill="url(#jumpstarter-156-k-uid-34)"
+                        ></polyline>
+                        <linearGradient
+                          id="jumpstarter-156-l-uid-34"
+                          gradientUnits="userSpaceOnUse"
+                          x1="-35.813"
+                          y1="73.022"
+                          x2="-21.63"
+                          y2="87.205"
+                          gradientTransform="scale(1 -1) rotate(-20.138 -387.937 -441.327)"
+                        >
+                          <stop offset="0" stop-color="#01cdbe"></stop>
+                          <stop offset=".24" stop-color="#22d3bb"></stop>
+                          <stop offset=".77" stop-color="#76e1b4"></stop>
+                          <stop offset=".93" stop-color="#91e6b2"></stop>
+                        </linearGradient>
+                        <polygon
+                          points="136.5,75.1 123.2,70.3 115.5,70.6 121.2,75.7 134.5,80.6 142.2,80.3"
+                          fill="url(#jumpstarter-156-l-uid-34)"
+                        ></polygon>
+                        <linearGradient
+                          id="jumpstarter-156-m-uid-34"
+                          gradientUnits="userSpaceOnUse"
+                          x1="-31.622"
+                          y1="70.571"
+                          x2="-24.911"
+                          y2="77.389"
+                          gradientTransform="scale(1 -1) rotate(-20.138 -387.937 -441.327)"
+                        >
+                          <stop offset="0" stop-color="#01cdbe"></stop>
+                          <stop offset=".24" stop-color="#22d3bb"></stop>
+                          <stop offset=".77" stop-color="#76e1b4"></stop>
+                          <stop offset=".93" stop-color="#91e6b2"></stop>
+                        </linearGradient>
+                        <polygon
+                          points="134.9,86.1 117.3,79.7 121.2,75.7 134.5,80.6"
+                          fill="url(#jumpstarter-156-m-uid-34)"
+                        ></polygon>
+                        <linearGradient
+                          id="jumpstarter-156-n-uid-34"
+                          gradientUnits="userSpaceOnUse"
+                          x1="-23.502"
+                          y1="81.306"
+                          x2="-14.389"
+                          y2="74.102"
+                          gradientTransform="scale(1 -1) rotate(-20.138 -387.937 -441.327)"
+                        >
+                          <stop offset="0" stop-color="#01cdbe"></stop>
+                          <stop offset=".24" stop-color="#22d3bb"></stop>
+                          <stop offset=".77" stop-color="#76e1b4"></stop>
+                          <stop offset=".93" stop-color="#91e6b2"></stop>
+                        </linearGradient>
+                        <polygon
+                          points="142.2,80.3 134.5,80.6 134.9,86.1 145,85.7"
+                          fill="url(#jumpstarter-156-n-uid-34)"
+                        ></polygon>
+                        <linearGradient
+                          id="jumpstarter-156-o-uid-34"
+                          gradientUnits="userSpaceOnUse"
+                          x1="-46.977"
+                          y1="73.287"
+                          x2="-36.336"
+                          y2="77.951"
+                          gradientTransform="scale(1 -1) rotate(-20.138 -387.937 -441.327)"
+                        >
+                          <stop offset="0" stop-color="#01cdbe"></stop>
+                          <stop offset=".24" stop-color="#22d3bb"></stop>
+                          <stop offset=".77" stop-color="#76e1b4"></stop>
+                          <stop offset=".93" stop-color="#91e6b2"></stop>
+                        </linearGradient>
+                        <polygon
+                          points="115.5,70.6 109.9,72.9 117.3,79.7 121.2,75.7"
+                          fill="url(#jumpstarter-156-o-uid-34)"
+                        ></polygon>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="pe-2"></div>
+                  <div class="content d-flex flex-column">
+                    <div class="white text-light">
+                      <h1 class="connect text-light">
+                        Get 80 Connects each month
+                      </h1>
+                      <p class="m-0">
+                        Join Freelancer Plus to start each month fresh with 80
+                        Connects. You'll get a lot of other perks too! Join now
+                        to unlock new features to help you grow your network and
+                        market your skills.
+                      </p>
+                    </div>
+                    <div class="d-flex">
+                      <a href="#" class="d-flex btn def-btn mt-3 d-flex"
+                        >Learn more</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container mt-4">
+              <form class="input-group" data-bs-boundary="viewport">
+                <input type="search" class="form-control p-2 rounded-top" placeholder="Search...">
+                <button style="width: 45px;" type="button" class="btn btn-outline-dark btn-search-hover" data-bs-toggle="dropdown" id="dropdownMenuButton"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 14 14" role="img"><path d="M13.655 12.004l-3.25-3.255a5.64 5.64 0 00.92-3.087c0-1.509-.589-2.93-1.66-4.001A5.626 5.626 0 005.661.002 5.666 5.666 0 000 5.661a5.67 5.67 0 005.661 5.663 5.655 5.655 0 003.093-.92l3.252 3.252c.218.221.512.344.825.344.314 0 .606-.123.824-.345.222-.219.345-.511.345-.823 0-.312-.123-.606-.345-.828zM5.661 9.549a3.89 3.89 0 01-3.885-3.888 3.89 3.89 0 013.885-3.887 3.892 3.892 0 013.888 3.887 3.892 3.892 0 01-3.888 3.888z"></path></svg></button>
+              </form>
+            </div>
+            <div class="up-card card-feed rounded-top pb-0 mb-0">
+              <div class="up-card-header">
+                <form class="input-group" data-bs-boundary="viewport">
+                <div class="row">
+                  <h2 class="col mb-2">Jobs you might like</h2>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <ul class="nav nav-tabs">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"
+                          >Best Match</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true"
+                          >Most Recent</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true"
+                          >Saved Jops</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="up-card-section border-0">
+                Browse jobs that match your experience to a client's hiring
+                preferences. Ordered by most relevant.
+              </div>
+              <div class="up-card-section-jop up-card-section rounded-0 border-0" id="generate-jops">
+                <div class="jops" id="jops">
+                  <div class="row my-4">
+                    <div class="col">
+                      <h3 class="jop-title my-0 p-sm-right">
+                        <a href="#" class="jop-title-link"
+                          >Wordpress stripe help</a
+                        >
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="row mb-4">
+                    <div>
+                      <small class="inline-block text-tan">
+                        <strong class="fixed-p">Fixed-price</strong>
+                        <span>
+                          -
+                          <span data-test="contractor-tier"
+                            >Intermediate</span
+                          ></span
+                        >
+                      </small>
+                    </div>
+                    <div class="mt-2">
+                      <div class="position-relative">
+                        <span class="jop-desc">
+                          I deactivated a stripe button, and now it still shows
+                          on my client website. The code is also hidden for some
+                          reason. Please help. I need help immediately!!!
+                        </span>
+                      </div>
+                    </div>
+                    <div class="mt-2">
+                      <div>
+                        <small class="d-inline-block mr-10"
+                          ><span class="text-tan">Proposals: </span>
+                          <strong class="propo">10 to 15</strong></small
+                        >
+                        <!---->
+                      </div>
+                    </div>
+                    <div class="mt-2 badge-line">
+                      <span class="d-inline-flex">stars</span>
+                      <small class="d-inline-block">
+                        <strong><span>$0</span></strong>
+                        <span class="text-tan ml-2">spent</span></small
+                      >
+                      <small
+                        data-test="client-country"
+                        class="d-none d-lg-inline-flex text-muted"
+                        ><div class="up-icon inline-block">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true"
+                            viewBox="0 0 14 14"
+                            role="img"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M4.856 4.9c0 1.183.928 2.103 2.124 2.103 1.23 0 2.164-.907 2.162-2.102-.001-1.19-.93-2.096-2.154-2.098C5.79 2.801 4.856 3.72 4.856 4.9m2.14 9.1c-.09-.116-.17-.22-.25-.326-1.137-1.507-2.214-3.053-3.16-4.684-.517-.89-.996-1.802-1.328-2.779-.561-1.652-.181-3.133.9-4.453C3.998.737 5.123.181 6.449.032c2.35-.266 4.57 1.128 5.302 3.327.203.611.3 1.24.225 1.884-.06.51-.227.991-.418 1.465-.411 1.018-.947 1.973-1.52 2.91a49.947 49.947 0 01-2.96 4.284l-.08.097"
+                            ></path>
+                          </svg>
+                        </div>
+                        &nbsp;
+                        <strong>India</strong></small
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            </div>
+            <aside class="col-lg-3 d-none d-lg-block">
+              <div class="sidebar">
+                <div class="up-card position-relative mt-0 py-0 rounded-3 border-1 px-3">
+                  <div class="up-card-section border-0">
+                    <a href="#" class="align-items-center d-flex flex-column">
+                      <img
+                        src="https://www.upwork.com/profile-portraits/c1t8uzQxdSKzqihz159M9qxnI1hLUDcuIR-KfHfvV2WWfkT2rrg2srQEWLlo1YBwUF"
+                        alt="Abdelrahman Mohamed S."
+                        class="up-avatar d-inline-flex text-center"
+                      />
+                    </a>
+                    <div class="text-center">
+                      <h3 class="mt-3 mb-0 name">
+                        Abdelrahman Mohamed Sakr
+                      </h3>
+                      <p class="mt-3 mb-0 jp-title">Full Stack Web Developer</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+
+        </div>
+      </div>
+    </main>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
